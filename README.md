@@ -1,4 +1,3 @@
 zendsamples
 ===========
 
-Zend Sample Projects
