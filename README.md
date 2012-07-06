@@ -1,3 +1,3 @@
-zendsamples
+zendsamples project
 ===========
 
