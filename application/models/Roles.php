@@ -1,7 +1,7 @@
 <?php
-final class Application_Model_Roles
+final class Application_Model_Roles extends Zend_Db_Table_Abstract
 {
-    private function __construct() {}
+    protected $_primary = 'id';
     
     const student = 'student';
     const teacher = 'teacher';
