@@ -6,7 +6,7 @@ class ClassesController extends Zend_Controller_Action
         /* Initialize action controller here */
     }
     
-    public function indexAction()
+    public function manageAction()
     {
         
     }

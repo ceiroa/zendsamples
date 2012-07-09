@@ -1,5 +1,8 @@
 <?php
-class Students_Controller extends Zend_Controller_Action
+class StudentsController extends Zend_Controller_Action
 {
+    public function manageAction()
+    {
     
+    }   
 }

@@ -39,9 +39,6 @@ DEFAULT CHARACTER SET = utf8;
 
 CREATE UNIQUE INDEX `class_id_UNIQUE` ON `bootcamp`.`Classes` (`class_id` ASC) ;
 
-CREATE INDEX `fk_Classes_Departments1` ON `bootcamp`.`Classes` (`department_id` ASC) ;
-
-
 -- -----------------------------------------------------
 -- Table `bootcamp`.`Roles`
 -- -----------------------------------------------------
@@ -94,11 +91,6 @@ CREATE  TABLE IF NOT EXISTS `bootcamp`.`StudentsClasses` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE INDEX `fk_StudentsClasses_Students1` ON `bootcamp`.`StudentsClasses` (`student_id` ASC) ;
-
-CREATE INDEX `fk_StudentsClasses_Classes1` ON `bootcamp`.`StudentsClasses` (`class_id` ASC) ;
-
-
 -- -----------------------------------------------------
 -- Table `bootcamp`.`Teachers`
 -- -----------------------------------------------------
@@ -120,9 +112,6 @@ DEFAULT CHARACTER SET = utf8;
 
 CREATE UNIQUE INDEX `idTeachers_UNIQUE` ON `bootcamp`.`Teachers` (`teacher_id` ASC) ;
 
-CREATE INDEX `fk_Teachers_Departments1` ON `bootcamp`.`Teachers` (`department_id` ASC) ;
-
-
 -- -----------------------------------------------------
 -- Table `bootcamp`.`TeachersClasses`
 -- -----------------------------------------------------
@@ -143,9 +132,6 @@ CREATE  TABLE IF NOT EXISTS `bootcamp`.`TeachersClasses` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE INDEX `fk_TeachersClasses_Teachers1` ON `bootcamp`.`TeachersClasses` (`teacher_id` ASC) ;
-
-
 -- -----------------------------------------------------
 -- Table `bootcamp`.`Users`
 -- -----------------------------------------------------
@@ -154,11 +140,10 @@ CREATE  TABLE IF NOT EXISTS `bootcamp`.`Users` (
   `username` VARCHAR(45) NOT NULL ,
   `password` VARCHAR(45) NOT NULL ,
   `email` VARCHAR(45) NOT NULL ,
-  `role` INT(11) NOT NULL ,
-  `Roles_id` INT(11) NOT NULL ,
+  `role_id` INT(11) NOT NULL ,
   PRIMARY KEY (`id`) ,
   CONSTRAINT `fk_Users_Roles1`
-    FOREIGN KEY (`Roles_id` )
+    FOREIGN KEY (`role_id` )
     REFERENCES `bootcamp`.`Roles` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -172,10 +157,6 @@ CREATE UNIQUE INDEX `username_UNIQUE` ON `bootcamp`.`Users` (`username` ASC) ;
 CREATE UNIQUE INDEX `email_UNIQUE` ON `bootcamp`.`Users` (`email` ASC) ;
 
 CREATE INDEX `role_id` ON `bootcamp`.`Users` (`id` ASC) ;
-
-CREATE INDEX `fk_Users_Roles1` ON `bootcamp`.`Users` (`Roles_id` ASC) ;
-
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
