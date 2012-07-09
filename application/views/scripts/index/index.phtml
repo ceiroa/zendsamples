@@ -1,13 +1,18 @@
 <!-- <h1>Welcome <?php //echo($this->user->first. " " . $this->user->last); ?></h1> -->
 
 <ul>
-	<li><a
-		href="<?php echo $this->url(array('controller'=>'students', 'action'=>'index')); ?>">
-			Manage Students</a></li>
-	<li><a
-		href="<?php echo $this->url(array('controller'=>'classes', 'action'=>'index')); ?>">
-			Manage Classes</a></li>
-	<li><a
-		href="<?php echo $this->url(array('controller'=>'teachers', 'action'=>'index')); ?>">
+	<li>
+	    <a href="<?php echo $this->url(array('controller' => 'students', 
+		                                     'action'     => 'index')); ?>">
+			Manage Students</a>
+	</li>
+	<li>
+	    <a href="<?php echo $this->url(array('controller' => 'classes', 
+		                                     'action'     => 'index')); ?>">
+			Manage Classes</a>
+	</li>
+	<li>
+	    <a href="<?php echo $this->url(array('controller' => 'teachers', 
+		                                     'action'     => 'index')); ?>">
 			Manage Teachers</a></li>
 </ul>
