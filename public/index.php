@@ -14,6 +14,9 @@ set_include_path(implode(PATH_SEPARATOR, array(
     get_include_path(),
 )));
 
+//Set timezone. Is this the best place to put it?
+date_default_timezone_set("America/Chicago");
+
 /** Zend_Application */
 require_once 'Zend/Application.php';
 

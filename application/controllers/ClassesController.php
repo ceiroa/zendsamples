@@ -6,22 +6,32 @@ class ClassesController extends Zend_Controller_Action
         /* Initialize action controller here */
     }
     
+    public function createNewAction()
+    {
+        
+    }
+    
     public function manageAction()
     {
-        
-    }
     
-    public function newClassAction()
+    }
+
+    public function viewAllAction()
     {
         
     }
     
-    public function listAllClassesAction()
+    public function viewMineAction()
     {
         
     }
     
-    public function listMyClassesAction()
+    public function viewDetailAction()
+    {
+        
+    }
+    
+    public function enrollAction()
     {
         
     }
