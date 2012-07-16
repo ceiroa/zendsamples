@@ -11,7 +11,7 @@ httpd.conf (/user/local/zend/apache2/conf/ if using Zend Server in Mac):
     Listen 10088
 
 3. Un-comment the following line in httpd.conf
-    
+
     Include conf/extra/httpd-vhosts.conf
 
 4. Create VHOST in Web Server. In Apache add this to httpd-vhosts,conf 
